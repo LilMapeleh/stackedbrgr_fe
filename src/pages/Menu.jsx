@@ -7,7 +7,7 @@ const Menu = () => {
   const navigate = useNavigate();
   const name = localStorage.getItem('userName');
 
-  const handleOrder = () => {
+  const handleOrder = async () => {
     const newOrder = {
       id: uuidv4(),
       name,
@@ -16,15 +16,33 @@ const Menu = () => {
       createdAt: new Date().toISOString()
     };
 
-    // Get existing orders from localStorage
+    // Save order to localStorage
     const existingOrders = JSON.parse(localStorage.getItem('orders')) || [];
-
-    // Add new order
     const updatedOrders = [...existingOrders, newOrder];
     localStorage.setItem('orders', JSON.stringify(updatedOrders));
 
-    // Navigate to orders page
-    navigate('/myorders');
+    // Send order to backend
+    try {
+        const response = await fetch('http://127.0.0.1:5000/orders', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(newOrder)
+          });
+
+      if (!response.ok) {
+        throw new Error('Failed to send order');
+      }
+
+      const result = await response.json();
+      console.log('Server response:', result);
+
+      // Navigate after successful post
+      navigate('/myorders');
+    } catch (error) {
+      console.error('Error sending order:', error);
+    }
   };
 
   return (

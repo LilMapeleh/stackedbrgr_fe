@@ -13,7 +13,7 @@ const NameInput = () => {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-yellow-100">
-      <h1 className="text-3xl font-bold mb-4">Welcome to Burger Millennial</h1>
+      <h1 className="text-3xl font-bold mb-4">Welcome to Stacked's Burgers</h1>
       <input
         type="text"
         value={name}
