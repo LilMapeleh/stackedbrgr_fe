@@ -1,0 +1,158 @@
+/* General Reset and Typography */
+body {
+    margin: 0;
+    font-family: 'Georgia', serif;
+    background-color: #fcebd5;
+    color: #2f1b0c;
+  }
+  
+  /* Header */
+  header {
+    background-color: #2f1b0c;
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  header nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 1rem;
+  }
+  
+  header nav a:hover {
+    text-decoration: underline;
+  }
+  
+  .order-button {
+    background-color: #a93e22;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.3rem;
+    cursor: pointer;
+  }
+  
+  .order-button:hover {
+    background-color: #922f17;
+  }
+  
+  /* Hero Section */
+  .hero {
+    background-size: cover;
+    background-image: url('./burger-hero-image.png');
+    background-position: center;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  /* Main Sections */
+  .section {
+    max-width: 900px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+  }
+  
+  .section h2 {
+    font-size: 2rem;
+    color: #7b2d06;
+    margin-bottom: 1rem;
+  }
+  
+  .menu-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .order-now {
+    display: inline-block;
+    margin-top: 1.5rem;
+    background-color: #a93e22;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.3rem;
+    text-decoration: none;
+  }
+  
+  .order-now:hover {
+    background-color: #922f17;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #2f1b0c;
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+  }
+  
+  footer h2 {
+    font-size: 1.5rem;
+  }
+  
+  .menu-about-wrapper {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 4rem auto;
+    gap: 2rem;
+    padding: 0 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .menu-and-about {
+    flex: 1.2;
+    min-width: 300px;
+  }
+  
+  .menu-section {
+    margin-bottom: 2rem;
+  }
+  
+  .about-section {
+    text-align: left;
+  }
+  
+  .find-us-button {
+    display: inline-block;
+    margin-top: 1rem;
+    background-color: #a93e22;
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border-radius: 0.3rem;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .find-us-button:hover {
+    background-color: #922f17;
+  }
+  
+  .fries-image-container {
+    flex: 0.8;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  
+  .about-image {
+    max-width: 250px;
+    border-radius: 0.5rem;
+  }
+  
+  
